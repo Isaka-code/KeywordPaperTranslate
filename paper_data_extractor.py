@@ -1,3 +1,4 @@
+import pandas as pd
 import requests
 from xml.etree import ElementTree as ET
 from translate import translate_text

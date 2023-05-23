@@ -2,11 +2,6 @@ from datetime import datetime
 import streamlit as st
 from main import main
 
-# 現在の日時を取得
-now = datetime.now()
-
-# ファイル名に日時を追加
-filename = f"papers_{now.strftime('%Y%m%d%H%M%S')}.xlsx"
 
 st.title("PubMed Paper Searcher")
 
@@ -20,8 +15,14 @@ if st.button("Search"):
         main(japanese_keywords)
         st.success("Excel file has been created successfully.")
 
+        # 現在の日時を取得
+        now = datetime.now()
+
+        # ファイル名に日時を追加
+        filename = f"papers_{now.strftime('%Y%m%d%H%M%S')}.xlsx"
+
         # ダウンロードボタンを作成
-        with open("papers.xlsx", "rb") as f:
+        with open(filename, "rb") as f:
             bytes_data = f.read()
         st.download_button(
             label="Download Excel file",
