@@ -15,6 +15,7 @@ if st.button("Search"):
 
         # ファイル名に日時を追加
         filename = f"papers_{now.strftime('%Y%m%d%H%M%S')}.xlsx"
+        filename = "papers.xlsx"
 
         # メイン関数を実行
         st.write("Searching papers...")
