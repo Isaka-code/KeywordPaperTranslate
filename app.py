@@ -18,7 +18,7 @@ if st.button("Search"):
 
         # メイン関数を実行
         st.write("Searching papers...")
-        main(japanese_keywords)
+        main(japanese_keywords, filename)
         st.success("Excel file has been created successfully.")
 
         # ダウンロードボタンを作成
