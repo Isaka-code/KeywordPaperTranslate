@@ -1,4 +1,3 @@
-from datetime import datetime
 import streamlit as st
 from main import main
 
@@ -10,11 +9,6 @@ japanese_keywords = st.text_input("キーワードを入力してください（
 
 if st.button("Search"):
     if japanese_keywords:
-        # 現在の日時を取得
-        now = datetime.now()
-
-        # ファイル名に日時を追加
-        filename = f"papers_{now.strftime('%Y%m%d%H%M%S')}.xlsx"
         filename = "papers.xlsx"
 
         # メイン関数を実行
