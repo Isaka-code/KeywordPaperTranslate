@@ -56,7 +56,10 @@ class PubMed:
                 )
             except:
                 authors = ""
-            abstract = root.find(".//AbstractText").text
+            try:
+                abstract = root.find(".//AbstractText").text
+            except:
+                abstract = None
 
             # 要約を日本語に翻訳
             try:

@@ -13,3 +13,4 @@ if __name__ == "__main__":
     japanese_text = input("キーワードを入力してください（日本語OK）：")  # 例："胃癌　手術　栄養"
     english_text = translate_text(japanese_text)
     print(english_text)  # 例：Gastric cancer surgical nutrition
+
