@@ -6,10 +6,10 @@ class ExcelWriter:
     def __init__(self, sheet_name):
         self.sheet_name = sheet_name
 
-    def write(self, data_list):
+    def write(self, papers, filename):
         # データフレームを作成
         df = pd.DataFrame(
-            data_list,
+            papers,
             columns=[
                 "Link",
                 "Title",
@@ -20,7 +20,6 @@ class ExcelWriter:
             ],
         )
 
-        filename = "papers.xlsx"
         if os.path.isfile(filename):
             # Excelファイルが存在する場合、ExcelWriterを使用して新しいシートを追加
             with pd.ExcelWriter(
