@@ -23,4 +23,5 @@ def main(japanese_keywords: str, filename: str):
 if __name__ == "__main__":
     # ユーザーからの入力を受け取る
     japanese_keywords = input("キーワードを入力してください（日本語OK）：")
-    main(japanese_keywords)
+    filename = "papers.xlsx"
+    main(japanese_keywords, filename)
